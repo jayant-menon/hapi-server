@@ -32,6 +32,18 @@ const init = async () => {
     },
   });
 
+  // In this route, we're using params. params is an object where
+  // each key is a path parameter name
+  // so if i go to /users/jayant
+  // request.params = { user: "jayant"}
+  server.route({
+    method: "GET",
+    path: "/users/{user}",
+    handler: (request, h) => {
+      return `<h1>Hello ${request.params.user}</h1>`;
+    },
+  });
+
   await server.start();
   // logging the fact the server started, server.info.uri refers to the passed in param to the server object,
   // in this case http://localhost:3000
