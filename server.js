@@ -15,8 +15,15 @@ const init = async () => {
   });
 
   // setting the home route
-  // server.route() accepts an object as a param, the object accepts at least
-  // a HTTP method, a path, and a handler
+  // server.route() creates a route
+  // Each route accepts an object as a param, the object accepts at least
+  // a HTTP method, a url path, and a handler that performs the business logic
+  // the parameters that the handler function takes can be names anything,
+  // but hapi convention is (request, h)
+  // the request object is created internally by hapi for each incoming request,
+  // contains details about the request
+  // contains request.auth, request.query, request.path, params, etc.
+  // h is a response toolkit which we can use to do things (like redirect the user, etc.)
   server.route({
     method: "GET",
     path: "/",
