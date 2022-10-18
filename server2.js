@@ -1,4 +1,6 @@
 // In this Hapi server, we're going to be serving static files to the user.
+// using @hapi/inert : to serve static files, partials, static file routing
+// downloading and displaying files
 
 // A static file is a file that is delivered to the user without
 // having to be modified. Think - login page - that view

@@ -10,6 +10,8 @@
 // Note - even if I'm only logging a value in a handler for a route,
 // the handler method MUST return a value
 
+// @hapi/vision is a plugin that enables us to use a templating engine 
+
 'use strict';
 
 const Hapi = require('@hapi/hapi');
